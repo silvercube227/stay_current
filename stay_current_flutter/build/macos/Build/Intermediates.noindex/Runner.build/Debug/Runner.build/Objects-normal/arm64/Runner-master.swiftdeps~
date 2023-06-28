@@ -1,8 +1,0 @@
-version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
-options: "918fcecffe7913ae71fb9c5c53b284b65d44020294ae91fc34edcde696e1a451"
-build_start_time: [1687556935, 406319000]
-build_end_time: [1687556935, 462625000]
-inputs:
-  "/Users/bennettye/Desktop/StayCurrentApp/SCFlutter/stay_current_flutter/macos/Flutter/GeneratedPluginRegistrant.swift": !private [1687556840, 958826183]
-  "/Users/bennettye/Desktop/StayCurrentApp/SCFlutter/stay_current_flutter/macos/Runner/AppDelegate.swift": !private [1686597682, 689638662]
-  "/Users/bennettye/Desktop/StayCurrentApp/SCFlutter/stay_current_flutter/macos/Runner/MainFlutterWindow.swift": !private [1686597682, 691141072]

@@ -14,18 +14,28 @@ class _LoginScreenState extends State<LoginScreen> {
   bool isAuthenticated = false;
   bool isHidden = false;
 
+  TextEditingController usernameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
   void checkLogin(BuildContext context) {
-    if (name == username && pass == password) {
+    if (username == name && password == pass) {
       setState(() {
         isAuthenticated = true;
       });
     }
-    if (isAuthenticated == true) {
+    if (isAuthenticated) {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => MainscreenView()),
       );
     }
+  }
+
+  @override
+  void dispose() {
+    usernameController.dispose();
+    passwordController.dispose();
+    super.dispose();
   }
 
   @override
@@ -35,7 +45,6 @@ class _LoginScreenState extends State<LoginScreen> {
         return Scaffold(
           body: GestureDetector(
             onTap: () {
-              // Dismiss the keyboard when tapped outside the text fields
               FocusScope.of(context).unfocus();
             },
             child: Container(
@@ -58,17 +67,19 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                         SizedBox(height: 20),
-                        Container(
-                          width: constraints.maxWidth * 0.6,
-                          child: Transform.translate(
-                            offset: Offset(constraints.maxWidth * 0,
-                                -constraints.maxHeight * 0.1),
+                        Transform.translate(
+                          offset: Offset(constraints.maxWidth * 0,
+                              -constraints.maxHeight * 0.1),
+                          child: GestureDetector(
+                            onTap: () {
+                              FocusScope.of(context).unfocus();
+                            },
                             child: TextField(
+                              controller: usernameController,
                               decoration: InputDecoration(
                                 labelText: 'Username:',
                                 border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(
-                                      20.0), // Set the border radius here
+                                  borderRadius: BorderRadius.circular(20.0),
                                 ),
                                 filled: true,
                                 fillColor: Colors.white,
@@ -82,18 +93,21 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 10),
-                        Container(
-                          width: constraints.maxWidth * 0.6,
-                          child: Transform.translate(
-                            offset: Offset(constraints.maxWidth * 0,
-                                -constraints.maxHeight * 0.1),
+                        Transform.translate(
+                          offset: Offset(constraints.maxWidth * 0,
+                              -constraints.maxHeight * 0.08),
+                          child: GestureDetector(
+                            onTap: () {
+                              FocusScope.of(context).unfocus();
+                            },
                             child: TextField(
+                              controller: passwordController,
                               obscureText: true,
                               decoration: InputDecoration(
                                 labelText: 'Password:',
                                 border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(20.0)),
+                                  borderRadius: BorderRadius.circular(20.0),
+                                ),
                                 filled: true,
                                 fillColor: Colors.white,
                               ),
@@ -105,7 +119,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               onSubmitted: (_) => checkLogin(context),
                             ),
                           ),
-                        ),
+                        )
                       ],
                     ),
                   ),
@@ -117,21 +131,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  if (isAuthenticated)
-                    Positioned.fill(
-                      child: Container(
-                        color: Colors.white,
-                        child: Center(
-                          child: Text(
-                            'Authenticated!',
-                            style: TextStyle(
-                              fontSize: 24,
-                              color: Colors.blue,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
                 ],
               ),
             ),

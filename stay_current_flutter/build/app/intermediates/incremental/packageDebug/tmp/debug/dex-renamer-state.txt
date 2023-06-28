@@ -1,4 +1,0 @@
-#Sun Jun 25 13:09:35 PDT 2023
-base.0=/Users/bennettye/Desktop/StayCurrentApp/SCFlutter/stay_current_flutter/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

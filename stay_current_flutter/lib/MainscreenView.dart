@@ -13,8 +13,8 @@ class MainscreenView extends StatelessWidget {
                 Expanded(
                   child: Container(
                     transform: Matrix4.translationValues(
-                        -MediaQuery.of(context).size.width * 0.1,
-                        -MediaQuery.of(context).size.height * 0.6,
+                        -MediaQuery.of(context).size.width * 0,
+                        -MediaQuery.of(context).size.height * 0.87,
                         0),
                     child: Image.asset(
                       'assets/images/wavepattern.png',
@@ -31,8 +31,8 @@ class MainscreenView extends StatelessWidget {
                 Expanded(
                   child: Container(
                     transform: Matrix4.translationValues(
-                        -MediaQuery.of(context).size.width * 0.05,
-                        MediaQuery.of(context).size.height * 0.4,
+                        MediaQuery.of(context).size.width * 0.0,
+                        MediaQuery.of(context).size.height * 0.47,
                         0),
                     child: Image.asset(
                       'assets/images/wavepattern.png',
@@ -49,19 +49,22 @@ class MainscreenView extends StatelessWidget {
             child: Row(
               children: [
                 IconButton(
-                  onPressed: () {
-                    // do something
-                  },
-                  icon: Icon(Icons.ac_unit),
-                ),
+                    onPressed: () {
+                      // do something
+                    },
+                    icon: Image.asset(
+                      'assets/images/S.png',
+                      width: MediaQuery.of(context).size.width * 0.15,
+                      height: MediaQuery.of(context).size.height * 0.9,
+                    )),
                 IconButton(
                   onPressed: () {
                     // do something
                   },
                   icon: Image.asset(
-                    'assets/images/newslogo.png',
+                    'assets/images/news.png',
                     width: MediaQuery.of(context).size.width * 0.15,
-                    height: MediaQuery.of(context).size.height * 0.1,
+                    height: MediaQuery.of(context).size.height * 0.9,
                   ),
                 ),
                 IconButton(
@@ -69,7 +72,7 @@ class MainscreenView extends StatelessWidget {
                     // do something
                   },
                   icon: Image.asset(
-                    'assets/images/pfpimage.png',
+                    'assets/images/PFP.png',
                     width: MediaQuery.of(context).size.width * 0.16,
                     height: MediaQuery.of(context).size.height * 0.08,
                   ),

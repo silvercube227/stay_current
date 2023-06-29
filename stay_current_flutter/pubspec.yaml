@@ -19,3 +19,9 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+  fonts:
+    - family: Oleo_Script
+      fonts:
+        - asset: assets/fonts/Oleo_Script/OleoScript-Regular.ttf
+        - asset: assets/fonts/Oleo_Script/OleoScript-Bold.ttf
+          weight: 700

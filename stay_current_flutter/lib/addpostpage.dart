@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:stay_current_flutter/MainscreenView.dart';
 import 'package:stay_current_flutter/addpostpage.dart';
 import 'package:stay_current_flutter/donationspage.dart';
 import 'package:stay_current_flutter/newspage.dart';
 import 'package:stay_current_flutter/profilepage.dart';
 
-class MainscreenView extends StatelessWidget {
+class addpostpage extends StatelessWidget {
   void _handleMenuSelection(String value) {
     // Add your logic here based on the selected menu item
     if (value == 'Option 1') {
@@ -72,6 +73,10 @@ class MainscreenView extends StatelessWidget {
                   ),
                   onPressed: () {
                     // Add your button tap logic here
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MainscreenView()),
+                    );
                   },
                   icon: Transform.scale(
                     scale: 2.25,
@@ -106,10 +111,6 @@ class MainscreenView extends StatelessWidget {
                   ),
                   onPressed: () {
                     // do something
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => addpostpage()),
-                    );
                   },
                   icon: Transform.scale(
                     scale: 3.75,

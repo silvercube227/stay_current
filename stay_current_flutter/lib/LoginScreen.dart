@@ -63,7 +63,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Text(
                         'Log In',
                         style: TextStyle(
-                          fontSize: 24,
+                          fontFamily: 'Oleo_Script',
+                          fontSize: 30,
                           color: Color(0xFF6BA6FF),
                         ),
                       ),

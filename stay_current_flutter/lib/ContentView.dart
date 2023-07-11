@@ -48,7 +48,8 @@ class _ContentViewState extends State<ContentView> {
                     child: Text(
                       "Stay Current",
                       style: TextStyle(
-                        fontSize: 24,
+                        fontSize: 40,
+                        fontFamily: 'Oleo_Script',
                         color: Color.fromRGBO(108, 166, 255, 1.0),
                       ),
                     ),

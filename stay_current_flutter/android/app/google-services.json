@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "561783417405",
+    "project_id": "stay-389401",
+    "storage_bucket": "stay-389401.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561783417405:android:7a2b14499f68e874711854",
+        "android_client_info": {
+          "package_name": "com.example.stay_current_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "561783417405-2osmp5g7ou4pafpr9ve9r2hnc7lfi4un.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1tENbPAe4U4wV_2KNT6kGXvSxdoRSt58"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "561783417405-2osmp5g7ou4pafpr9ve9r2hnc7lfi4un.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

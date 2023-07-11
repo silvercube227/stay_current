@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  firebase_auth: ^4.6.3
+  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:
@@ -19,3 +21,9 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+  fonts:
+    - family: Oleo_Script
+      fonts:
+        - asset: assets/fonts/Oleo_Script/OleoScript-Regular.ttf
+        - asset: assets/fonts/Oleo_Script/OleoScript-Bold.ttf
+          weight: 700

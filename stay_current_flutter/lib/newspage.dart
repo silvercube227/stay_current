@@ -18,6 +18,18 @@ class newspage extends StatelessWidget {
   }
 
   @override
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  void initState() {
+    super.initState();
+    fetchArticles();
+  }
+
+  @override
+=======
+>>>>>>> d08a8b408d566c697b6c30ec9c24fa2004144206
+>>>>>>> Stashed changes
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFFFFBF0),
@@ -226,8 +238,52 @@ class newspage extends StatelessWidget {
               ],
             ),
           ),
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+          Positioned.fill(
+            top: MediaQuery.of(context).size.height * 0.15,
+            child: ListView.builder(
+              itemCount: articles.length,
+              itemBuilder: (context, index) {
+                final article = articles[index];
+                return ListTile(
+                  title: Text(article['title']),
+                  subtitle: Text(article['summary']),
+                  onTap: () {
+                    // Handle article tap
+                    final url = article['url'];
+                    // Open the URL in a browser or WebView
+                    // ...
+                  },
+                );
+              },
+            ),
+          ),
+=======
+>>>>>>> d08a8b408d566c697b6c30ec9c24fa2004144206
+>>>>>>> Stashed changes
         ],
       ),
     );
   }
 }
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: newspage(),
+    );
+  }
+}
+
+void main() {
+  runApp(MyApp());
+}
+=======
+>>>>>>> d08a8b408d566c697b6c30ec9c24fa2004144206
+>>>>>>> Stashed changes

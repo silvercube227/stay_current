@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stay_current_flutter/MainscreenView.dart';
 import 'package:stay_current_flutter/addpostpage.dart';
-import 'package:stay_current_flutter/donationspage.dart';
 import 'package:stay_current_flutter/newspage.dart';
 import 'package:stay_current_flutter/profilepage.dart';
 

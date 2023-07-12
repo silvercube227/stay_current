@@ -2,10 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:stay_current_flutter/MainscreenView.dart';
 import 'package:stay_current_flutter/addpostpage.dart';
 import 'package:stay_current_flutter/donationspage.dart';
-import 'package:stay_current_flutter/newspage.dart';
 import 'package:stay_current_flutter/profilepage.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
-class newspage extends StatelessWidget {
+class newspage extends StatefulWidget {
+  @override
+  _NewspageState createState() => _NewspageState();
+}
+
+class _NewspageState extends State<newspage> {
+  List<Map<String, dynamic>> articles = [];
+
+  Future<void> fetchArticles() async {
+    final response = await http
+        .get(Uri.parse('http://your-flask-api-endpoint.com/articles'));
+    if (response.statusCode == 200) {
+      final List<Map<String, dynamic>> fetchedArticles = [];
+      final data = jsonDecode(response.body);
+      for (var article in data['articles']) {
+        fetchedArticles.add({
+          'title': article['title'],
+          'url': article['url'],
+          'content': article['content'],
+        });
+      }
+      setState(() {
+        articles = fetchedArticles;
+      });
+    } else {
+      print('Failed to fetch articles');
+    }
+  }
+
   void _handleMenuSelection(String value) {
     // Add your logic here based on the selected menu item
     if (value == 'Option 1') {
@@ -18,18 +47,12 @@ class newspage extends StatelessWidget {
   }
 
   @override
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
   void initState() {
     super.initState();
     fetchArticles();
   }
 
   @override
-=======
->>>>>>> d08a8b408d566c697b6c30ec9c24fa2004144206
->>>>>>> Stashed changes
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFFFFBF0),
@@ -238,9 +261,6 @@ class newspage extends StatelessWidget {
               ],
             ),
           ),
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
           Positioned.fill(
             top: MediaQuery.of(context).size.height * 0.15,
             child: ListView.builder(
@@ -260,17 +280,11 @@ class newspage extends StatelessWidget {
               },
             ),
           ),
-=======
->>>>>>> d08a8b408d566c697b6c30ec9c24fa2004144206
->>>>>>> Stashed changes
         ],
       ),
     );
   }
 }
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 
 class MyApp extends StatelessWidget {
   @override
@@ -284,6 +298,3 @@ class MyApp extends StatelessWidget {
 void main() {
   runApp(MyApp());
 }
-=======
->>>>>>> d08a8b408d566c697b6c30ec9c24fa2004144206
->>>>>>> Stashed changes

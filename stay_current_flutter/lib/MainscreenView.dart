@@ -13,7 +13,7 @@ class MainscreenView extends StatelessWidget {
       // Handle Option 2 selection
     } else if (value == 'Option 3') {
       // Handle Option 3 selection
-    }
+    } else if (value == 'Option 4') {}
   }
 
   @override
